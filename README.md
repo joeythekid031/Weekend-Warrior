@@ -1,5 +1,3 @@
-[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/standard/semistandard)
-
 # _Weekend Warrior_
 
 ## Pages Overview:
@@ -44,22 +42,23 @@
 
 **Epic Weekend**
 
-- [ ] Must include dates of trip which must not exceed 72 hours
-- [ ] Must include way points to be displayed on map
-- [ ] Must include **tags**
-- [ ] Must include price range
-- [ ] Must include all “Must Sees’”
-- [ ] Kind of lodging
-- [ ] Transportation type
-- [ ] Photo’s
-- [ ]
+- [ ]Must include dates of trip which must not exceed 72 hours
+- [ ]Must include way points to be displayed on map
+- [ ]Must include **tags**
+- [ ]Must include price range
+- [ ]Must include all “Must Sees’”
+- [ ]Kind of lodging
+- [ ]Transportation type
+- [ ]Photo’s
+- [ ]Comment section
 
 ## Other Needs:
 
-- [ ] Persistent Header
-- [ ] Persistent Footer
-- [ ] Logo
-- [ ] Integrate CRUD
+- [ ]Persistent Header
+- [ ]Persistent Footer
+- [ ]Logo
+- [ ]Integrate CRUD
+- [ ]Site Search
 
 ## Future Enhancements
 
