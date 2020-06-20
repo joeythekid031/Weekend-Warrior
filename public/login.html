@@ -37,38 +37,44 @@
         </nav>
         
         <div class="landing-text">
-          <h1>Weekend Warrior</h1>
-          <h6>Epic Weekend Ideas</h6>
+          <h1>Login</h1>
         </div>
       </header>
     
-        <section class="home" id="home">
-          <div class="container">
-            <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
-              <img src="https://cdn.shopify.com/s/files/1/1871/9501/articles/back-pain-and-riding-a-motorcycle-1200x800_1200x.jpeg?v=1537286927" alt="kc-skyline">
-            </div>
-            <div class="home-details" data-aos="fade-left" data-aos-delay="600">
-              <div class="home-heading">
-                <h1>Your</h1>
-                <h6>Weekend</h6>
-              </div>
-              <p>
-                After spending the last 4 years studying and working in the automotive field around the Kansas City metro area, I have begun my pursuit of a career in the world of Full Stack Web Developers. In my portfolio you will find some of my most recent works using HTML, CSS, and JavaScript.
-              </p>
-            </div>
-          </div>
-        </section>
-    
+      <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+         
+        </div>
       
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
     
-        <footer class="copyright">
-          <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
-          </div>
-          <p>&copy; 2020</p>
-        </footer>
+      <footer class="copyright">
+        <div class="up" id="up">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+        <p>&copy; 2020</p>
+      </footer>
         
     
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="js/index.js"></script>
