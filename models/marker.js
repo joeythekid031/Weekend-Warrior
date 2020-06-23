@@ -1,15 +1,16 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Example = sequelize.define(
-    'Example',
+  const Marker = sequelize.define(
+    'Marker',
     {
-      text: DataTypes.STRING,
-      description: DataTypes.TEXT
+      lat: DataTypes.STRING,
+      long: DataTypes.STRING,
+      popup: DataTypes.STRING,
     },
     {}
   );
-  Example.associate = function (_models) {
-    // associations can be defined here
+  Marker.associate = function (models) {
+    Marker.belongsTo(models.Post)
   };
-  return Example;
+  return Marker;
 };
