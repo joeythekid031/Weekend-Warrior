@@ -12,12 +12,17 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Jekyll v4.0.1" />
-    <title>Checkout example · Bootstrap</title>
+    <title>Ultimate Weekend - Registration!</title>
 
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/4.5/examples/checkout/"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/styles.css">
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/dist/css/bootstrap.css" rel="stylesheet" />
@@ -41,16 +46,43 @@
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet" />
   </head>
+
   <body class="bg-light">
+
+    <header>
+      <div class="menu-toggler">
+        <div class="bar half start"></div>
+        <div class="bar"></div>
+        <div class="bar half end"></div>
+      </div>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="login.html" class="nav-link">Login</a>
+          </li>
+          <li>
+            <a href="adventure.html" class="nav-link">Adventure</a>
+          </li>
+          <li>
+            <a href="epic.html" class="nav-link">Epic Weekend</a>
+          </li>
+          <li>
+            <a href="registration-page.html" class="nav-link">Register</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="landing-text">
+        <h1>Registration</h1>
+      </div>
+    </header>
+
     <div class="container">
       <div class="py-5 text-center">
-        <img
-          class="d-block mx-auto mb-4"
-          src="./assets/brand/bootstrap-solid.svg"
-          alt=""
-          width="72"
-          height="72"
-        />
+
         <h2>New Weekend Warrior Sign-up</h2>
         <p class="lead">
           Create your own Weekend Warrior profile to give a BIG F-Yes vote to
@@ -58,7 +90,7 @@
         </p>
       </div>
 
-        <div class="col-md-8 order-md-1">
+        <div class="col-md-8 order-md-1" id="weekend">
           <h4 class="mb-3">Weekend Warrior</h4>
           <form class="needs-validation" novalidate>
             <div class="row">
@@ -189,16 +221,22 @@
           </form>
         </div>
       </div>
+    </div>  
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2020 Weekend Warrior</p>
+
+      <footer class="copyright">
+        <div class="up" id="up">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+          <p class="mb-1">&copy; 2020 Weekend Warrior</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
           <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
-    </div>
+        </ul>     
+       </footer>
+
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -210,7 +248,15 @@
           '<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>'
         );
     </script>
+
+
+
     <script src="./assets/dist/js/bootstrap.bundle.js"></script>
     <script src="form-validation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+
   </body>
+  
 </html>
