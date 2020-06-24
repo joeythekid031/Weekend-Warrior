@@ -1,5 +1,5 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "Weekend-Warriors-node-handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -17,7 +17,6 @@
     "orm:migrate:reset": "sequelize db:migrate:undo:all && npm run orm:migrate",
     "orm:seed": "sequelize db:seed:all",
     "precommit": "lint-staged",
-    "prestart": "sequelize db:create && npm run orm:migrate",
     "pretest": "cross-env NODE_ENV=test npm run orm:migrate:reset",
     "devStart": "nodemon server.js"
   },
@@ -33,15 +32,10 @@
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.1.0",
-
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-
     "path": "^0.12.7",
-
     "nodemon": "^2.0.4",
-    "passport": "^0.4.1",
-
     "sequelize": "^4.44.4"
   },
   "devDependencies": {

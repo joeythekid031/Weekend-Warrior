@@ -16,15 +16,12 @@ const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
-<<<<<<< HEAD
 const path = require('path');
-=======
->>>>>>> 122e6658056b267c6833fa699d3d1d848775f4ce
 
 const initializePassport = require('./passport-config');
 initializePassport(
   passport,
-  (email) => users.find((user) => user.email === email),
+  (username) => users.find((user) => user.username === email),
   (id) => users.find((user) => user.id === id)
 );
 
@@ -60,17 +57,14 @@ app.engine(
   })
 );
 
-<<<<<<< HEAD
 app.set('view engine', 'handlebars');
 // app.set('view engine', 'ejs');
 //app.engine('html', () => {});
 //app.set('views', path.join(__dirname, 'public'));
 //app.engine('html', require('ejs').renderFile);
 //app.set('view engine', 'html');
-=======
 //app.set('view engine', 'handlebars');
 app.set('view engine', 'ejs');
->>>>>>> 122e6658056b267c6833fa699d3d1d848775f4ce
 
 // app.get('/', (req, res) => {
 //   res.render('index.handlebars', { name: 'namenamename' });
@@ -81,11 +75,8 @@ app.get('/', checkAuthenticated, (req, res) => {
 });
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
-<<<<<<< HEAD
   res.render('login');
-=======
   res.render('login.ejs');
->>>>>>> 122e6658056b267c6833fa699d3d1d848775f4ce
 });
 
 app.post(
@@ -102,11 +93,8 @@ app.post(
 // });
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
-<<<<<<< HEAD
   res.render('register');
-=======
   res.render('register.ejs');
->>>>>>> 122e6658056b267c6833fa699d3d1d848775f4ce
 });
 
 //app.post('/register', (req, res) => {});
@@ -116,7 +104,7 @@ app.post('/register', async (req, res) => {
     users.push({
       id: Date.now().toString(),
       name: req.body.name,
-      email: req.body.email,
+      username: req.body.username,
       password: hashedPassword
     });
     res.redirect('/login');
