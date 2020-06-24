@@ -51,3 +51,5 @@ typings/
 .DS_Store
 #IDE and Text Editors
 .vscode
+.env
+ 
