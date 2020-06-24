@@ -21,7 +21,7 @@ const path = require('path');
 const initializePassport = require('./passport-config');
 initializePassport(
   passport,
-  (email) => users.find((user) => user.email === email),
+  (username) => users.find((user) => user.username === email),
   (id) => users.find((user) => user.id === id)
 );
 
@@ -104,7 +104,7 @@ app.post('/register', async (req, res) => {
     users.push({
       id: Date.now().toString(),
       name: req.body.name,
-      email: req.body.email,
+      username: req.body.username,
       password: hashedPassword
     });
     res.redirect('/login');
