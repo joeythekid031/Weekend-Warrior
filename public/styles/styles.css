@@ -82,6 +82,20 @@ span.psw {
   width: 28%;
 }
 
+.profile {
+  
+  margin-left: 540px;
+}
+
+ 
+
+.realname, .username, .email {
+  text-align: center;
+
+}
+
+
+
 label {
   display: block;
   font: 1rem 'Fira Sans', sans-serif;
