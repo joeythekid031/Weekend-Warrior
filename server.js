@@ -16,6 +16,7 @@ const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
+const path = require('path');
 
 const initializePassport = require('./passport-config');
 initializePassport(
@@ -42,7 +43,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json());
-app.use(express.static('public'));
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 app.use(methodOverride('_method'));
 
@@ -55,8 +57,12 @@ app.engine(
   })
 );
 
-//app.set('view engine', 'handlebars');
-app.set('view engine', 'ejs');
+app.set('view engine', 'handlebars');
+// app.set('view engine', 'ejs');
+//app.engine('html', () => {});
+//app.set('views', path.join(__dirname, 'public'));
+//app.engine('html', require('ejs').renderFile);
+//app.set('view engine', 'html');
 
 // app.get('/', (req, res) => {
 //   res.render('index.handlebars', { name: 'namenamename' });
@@ -67,7 +73,7 @@ app.get('/', checkAuthenticated, (req, res) => {
 });
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
-  res.render('login.ejs');
+  res.render('login');
 });
 
 app.post(
@@ -84,7 +90,7 @@ app.post(
 // });
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
-  res.render('register.ejs');
+  res.render('register');
 });
 
 //app.post('/register', (req, res) => {});
