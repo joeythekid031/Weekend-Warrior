@@ -527,6 +527,7 @@ textarea {
 
 .copyright {
   width: 100%;
+  height: 0%;
   text-align: center;
   background-color: #16162d;
   padding: 2rem 0;
@@ -555,6 +556,7 @@ textarea {
 .copyright p {
   font-size: 1.4rem;
   color: gold;
+  padding: -6% 0;
 }
 
 @keyframes pulse {
