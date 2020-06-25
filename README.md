@@ -1,41 +1,52 @@
 # _Weekend Warrior_
 
+This project is meant for people to share fun and exciting weekend plans with others. If you want to share a fun idea or just find something for you and your friends to do, you can come here and see what's popular in your area.
+
+We all have different things that we liked to do, hobbies that overlap. When talking about our hobbies we found that there was no place where one could go to talk about plans that spanned all of our different hobbies. So we wanted to make a place where you could share fun things around the area no matter what you’re into.
+
+We have made a site where you can go share your ideas for biking, four wheeling, hiking, frisbee golf or even just grabbing a few beers with the boys. Others can then come and see what is popular in their area. They can either run with an existing idea or create their own.
+
 ## Pages Overview:
 
 **Home**
-▪Trip overviews sorted by total number of "F-Yes'" votes
+▪Submitted trip overviews sorted by total number of "Upvotes" :+1:
 
 **Login**
-▪Validation required before users can interact (Vote, Post, Contact, etc.)
+▪User authentication required before users can interact (Upvote, post their Epic Weekend, Contact others, etc.)
 
-**Adventurer**
-▪Individual user profile page
+**Weekend Warriors**
+▪Individual User profile page
 
 **Epic Weekend**
-▪All details, pictures, maps and suggestions for changes
+▪A collection of all of the user submitted weekend overviews
 
-## Page Requirements
+## Requirements
+
+An authenticated user account is required
+
+## Page Contents
 
 **Home**
 
 - [ ]Intro statement
-- [ ]Trip submissions
-- [ ]"F-Yes" (upvote) Button for each Adventure displayed
-- [ ] About
+- [ ]Site Search
+- [ ]All Trip Submissions
+- [ ]Upvote Button for each Epic Weekend
+- [ ]About Section
 
 **Login**
 
-- [ ]Username field
+- [ ]Username Field
 - [ ]Password Field
 - [ ]Submit Button
-- [ ]Alert if Incorrect
+- [ ]Alert upon failed authentication
 
 **Adventurer**
 
 - [ ]Username (Login ID)
-- [ ]List of all submitted trips
+- [ ]List of all of the user's submitted trips
 - [ ]Means of contact
-- [ ]Rating (total number of upvotes received)
+- [ ]Rating (total number of Upvotes received)
 - [ ]Top Trip Displayed
 - [ ]About (Passions, Hobbies, Favorite Trip, etc.)
 - [ ]Age Range - [ ]
@@ -51,20 +62,15 @@
 - [ ]Transportation type
 - [ ]Photo’s
 - [ ]Comment section
+- [ ]Price range
 
 ## Other Needs:
 
-- [ ]Persistent Header
-- [ ]Persistent Footer
-- [ ]Logo
-- [ ]Integrate CRUD
-- [ ]Site Search
-
 ## Future Enhancements
 
-1. Item 1
-2. Item 2
-3. Item 3
+1.
+2.
+3.
 
 ## Bug reports
 
