@@ -1,6 +1,6 @@
 const Router = require('express').Router;
-const postRoutes = require('./posts');
-const db = require('../models');
+const postRoutes = require('.');
+const db = require('../../models');
 const apiRoutes = Router();
 
 apiRoutes.use('/posts', postRoutes);
