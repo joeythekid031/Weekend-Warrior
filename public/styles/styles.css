@@ -83,18 +83,14 @@ span.psw {
 }
 
 .profile {
-  
   margin-left: 540px;
 }
 
- 
-
-.realname, .username, .email {
+.realname,
+.username,
+.email {
   text-align: center;
-
 }
-
-
 
 label {
   display: block;
@@ -296,6 +292,24 @@ li {
   width: 100%;
   text-align: center;
   z-index: 1;
+}
+
+.login h1 {
+  position: absolute;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  color: rgb(184, 238, 75);
+  margin-bottom: 200px;
+}
+
+.register {
+  position: absolute;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  color: rgb(184, 238, 75);
+  margin-bottom: 700px;
 }
 
 .landing-text h1 {
