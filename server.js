@@ -1,6 +1,6 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   require('dotenv').config();
+// }
 
 const express = require('express');
 const Handlebars = require('handlebars');
@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: 'secretidhere',
     resave: false,
     saveUninitialized: false
   })
@@ -78,7 +78,7 @@ passport.use(
       usernameField: 'username',
       passwordField: 'password',
       passReqToCallback: true,
-      session: false
+      session: true
     },
     function (req, username, password, done) {
       console.log('username:', username);
@@ -118,7 +118,7 @@ app.post(
   passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
-    failureFlash: true
+    failureFlash: 'You are not able to login.'
   }),
   (req, res) => {
     res.redirect('/');
