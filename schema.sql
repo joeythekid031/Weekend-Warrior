@@ -1,4 +1,4 @@
 -- Drops the db if it exists currently --
-DROP DATABASE IF EXISTS weekendwarriors;
+DROP DATABASE IF EXISTS weekendwarrior;
 -- Creates the database --
-CREATE DATABASE weekendwarriors;
+CREATE DATABASE weekendwarrior;
