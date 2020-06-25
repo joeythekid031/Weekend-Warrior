@@ -7,7 +7,10 @@ module.exports = (sequelize, DataTypes) => {
       endDate: DataTypes.DATEONLY,
       lodgingType: DataTypes.STRING(64),
       transportationType: DataTypes.STRING(64),
-      details: DataTypes.STRING(140)
+      details: DataTypes.STRING(140),
+      title: DataTypes.STRING(64),
+      body: DataTypes.TEXT,
+      category: DataTypes.STRING
     },
     {}
   );
