@@ -20,77 +20,79 @@
     <link rel="stylesheet" href="styles/styles.css" />
 
 
-   <style>
-  body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+    <style>
+      body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      }
 
-html {
-  box-sizing: border-box;
-}
+      html {
+      box-sizing: border-box;
+      }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+    
+      .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+      }
 
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+      }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
+      .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+      }
 
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
-}
+      .container {
+      padding: 0 16px;
+      }
 
-.container {
-  padding: 0 16px;
-}
+      .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+      }
 
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+      .title {
+      color: grey;
+      }
 
-.title {
-  color: grey;
-}
+      .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
+      .button:hover {
+      background-color: #555;
+      }
+    
+      @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+        }
+      }
+    </style>
+  <head>
 
-.button:hover {
-  background-color: #555;
-}
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ultimate Weekend Plans!</title>
@@ -99,7 +101,7 @@ html {
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/styles.css">
-    </head>
+</head>
     
     <body>
       <header>
@@ -134,10 +136,6 @@ html {
       </header>
 
     </style>
-   
-
-
-
 
   </head>
 
@@ -178,7 +176,7 @@ html {
       </p>
     </div>
 
-    <h2 style="text-align: center;">WEEKEND WARRIOR</h2>
+    <h2 style="text-align: center;"></h2>
     <div class="row">
        
 

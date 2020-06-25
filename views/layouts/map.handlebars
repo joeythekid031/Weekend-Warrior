@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Warrior</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/styles.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="bg-secondary">
+   <header>
+        <div class="menu-toggler">
+          <div class="bar half start"></div>
+          <div class="bar"></div>
+          <div class="bar half end"></div>
+        </div>
+        <nav class="top-nav">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="login.html" class="nav-link">Login</a>
+            </li>
+            <li>
+              <a href="adventure.html" class="nav-link">Adventure</a>
+            </li>
+            <li>
+              <a href="epic.html" class="nav-link">Epic Weekend</a>
+            </li>
+            <li>
+              <a href="registration-page.html" class="nav-link">Register</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="landing-text">
+          <h1>Weekend Warrior</h1>
+          <h6>Epic Weekend Ideas</h6>
+        </div>
+      </header>
+      {{{body}}}
+
+          <footer class="copyright">
+      <div class="up" id="up">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+      <p>&copy; 2020</p>
+    </footer>
+      
+  
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="js/index.js"></script>
+      <script>
+        const userMarkers = []
+        mapboxgl.accessToken = 'pk.eyJ1Ijoiam9leXRoZWtpZDAzMSIsImEiOiJja2JrNTg1czEwMjl2MndvNmFnaWg1eDQ0In0.VBG-q1Gi9kTSRaJOTwJ4kw';
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-94.578331, 39.0997],
+            zoom: 7
+
+        });
+
+
+        // set to user location
+        const marker = new mapboxgl.Marker()
+            .setLngLat([-94.578331, 39.0997])
+            .addTo(map);
+        function addMarker() {
+
+            const addedMarker = new mapboxgl.Marker({
+                draggable: true
+            })
+                // set to use location or center screen
+                .setLngLat([-94.578331, 39.0997])
+                .addTo(map)
+            // .setPopup(new mapboxgl.Popup().setHTML("<h1>testing</h1>"))
+            // const lngLat = addedMarker.getLngLat();
+            userMarkers.push(addedMarker);
+            console.log('userMarkers : ', userMarkers);
+
+            // console.log('Longitude: ' + lngLat.lng + ', Latitude: ' + lngLat.lat)
+
+        }
+        function saveMarker() {
+            // const userPlans = document.getElementById("usersInput")
+            const marker = userMarkers.map(m => m._lngLat);
+
+            // const lngLat = addedMarker.getLngLat();
+
+
+            console.log(marker)
+
+
+        }
+
+
+        // Store the marker's longitude and latitude coordinates in a variable
+        // const lngLat = addedMarker.getLngLat();
+        // Print the marker's longitude and latitude values in the console
+        // console.log('Longitude: ' + lngLat.lng + ', Latitude: ' + lngLat.lat)
+      </script>
+
+</body>
+
+</html>
