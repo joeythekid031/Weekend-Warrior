@@ -125,9 +125,9 @@ app.post(
   }
 );
 
-// app.get('/register', (req, res) => {
-//   res.render('register.handlebars');
-// });
+app.get('/epic', (req, res) => {
+  res.render('epic.handlebars');
+});
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
   res.render('register');
