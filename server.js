@@ -17,15 +17,9 @@ const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const path = require('path');
-
+const LocalStrategy = require('passport-local').Strategy;
 const initializePassport = require('./passport-config');
-initializePassport(
-  passport,
-  (username) => users.find((user) => user.username === email),
-  (id) => users.find((user) => user.id === id)
-);
-
-const users = [];
+const { use } = require('passport');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -64,20 +58,60 @@ app.set('view engine', 'handlebars');
 //app.engine('html', require('ejs').renderFile);
 //app.set('view engine', 'html');
 //app.set('view engine', 'handlebars');
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 // app.get('/', (req, res) => {
 //   res.render('index.handlebars', { name: 'namenamename' });
 // });
 
 app.get('/', checkAuthenticated, (req, res) => {
-  res.render('index.ejs', { name: req.user.name });
+  res.render('index', { name: req.user.name });
 });
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
   res.render('login');
-  res.render('login.ejs');
 });
+
+passport.use(
+  new LocalStrategy(
+    {
+      usernameField: 'username',
+      passwordField: 'password',
+      passReqToCallback: true,
+      session: false
+    },
+    function (req, username, password, done) {
+      console.log('username:', username);
+      console.log('password:', password);
+      console.log(req.body);
+      db.User.findOne({
+        where: { username: username, password: password }
+      }).then(function (response) {
+        // if (err) {
+        //   console.log('error', err);
+        //   return done(err);
+        // }
+        // if (!user) {
+        //   console.log('username error', err);
+        //   return done(null, false);
+        // }
+        // if (!user.verifyPassword(password)) {
+        //   console.log('password error', err);
+        //   return done(null, false);
+        // }
+        // return done(null, user);
+        passport.serializeUser(function (user, done) {
+          done(null, user);
+        });
+
+        passport.deserializeUser(function (user, done) {
+          done(null, user);
+        });
+        return done(null, response);
+      });
+    }
+  )
+);
 
 app.post(
   '/login',
@@ -85,7 +119,10 @@ app.post(
     successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true
-  })
+  }),
+  (req, res) => {
+    res.redirect('/');
+  }
 );
 
 // app.get('/register', (req, res) => {
@@ -94,21 +131,36 @@ app.post(
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
   res.render('register');
-  res.render('register.ejs');
 });
-
+let users = [];
 //app.post('/register', (req, res) => {});
 app.post('/register', async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    users.push({
-      id: Date.now().toString(),
-      name: req.body.name,
-      username: req.body.username,
-      password: hashedPassword
-    });
+    // // users.push(
+    //   id: Date.now().toString(),
+    //   name: req.body.name,
+    //   username: req.body.username,
+    //   password: hashedPassword
+    // });
+    db.User.create(
+      {
+        username: req.body.username,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: req.body.password
+      },
+      function (err, user) {
+        if (err) err;
+
+        res.redirect('/').status(201);
+      }
+    );
+
     res.redirect('/login');
-  } catch {
+  } catch (err) {
+    console.log(err);
     res.redirect('/register');
   }
   console.log(users);

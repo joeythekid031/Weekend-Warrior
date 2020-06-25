@@ -4,6 +4,8 @@
     "password": "Kclokote913",
     "database": "database_development",
     "host": "127.0.0.1",
+    "database": "weekendwarrior",
+    "password": "password",
     "dialect": "mysql"
   },
   "test": {
